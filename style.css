@@ -22,7 +22,7 @@ h1 {
     color: #555;
     text-align: center;
     font-weight: 300;
-    margin: 30 auto;
+    margin: 45 auto;
 }
 
 .container {
@@ -76,4 +76,25 @@ p.meta {
 
 a:hover {
     color: black;
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        background: #fff;
+        height: 120px;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        padding-bottom: 30px;
+    }
+    p {
+        font-size: 13pt;
+        padding: 0 1em;
+        line-height: 1.5em;
+    }
+    p.choice {
+        margin-top: 10px;
+
+    }
 }
