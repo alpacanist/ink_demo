@@ -40,6 +40,13 @@
             // Create paragraph element
             var paragraphElement = document.createElement('p');
             paragraphElement.innerHTML = paragraphText;
+            // storyContainer.appendChild(paragraphElement);
+
+            // // Check for the newPage tag
+            // if (tagsString.indexOf("newpage") > -1 ) {
+            //     storyContainer.innerHTML = ""; //this cleans the story page
+            // }
+            // // Resume appending stuff.
             storyContainer.appendChild(paragraphElement);
 
             // Fade in paragraph after a short delay
@@ -55,6 +62,8 @@
             var choiceParagraphElement = document.createElement('p');
             choiceParagraphElement.classList.add("choice");
             choiceParagraphElement.innerHTML = `<a href='#'>${choice.text}</a>`
+
+
             storyContainer.appendChild(choiceParagraphElement);
 
             // Fade choice in after a short delay
@@ -76,6 +85,8 @@
                 }
 
                 // Tell the story where to go next
+                // Page break after choice
+                storyContainer.innerHTML = "";
                 story.ChooseChoiceIndex(choice.index);
 
                 // Aaand loop
